@@ -1,9 +1,19 @@
-const API_KEY = '3926f6098ad6fa4a720d108126a309e1'; // Remplacez par votre propre clé API TMDB
-const BASE_URL = 'https://api.themoviedb.org/3';
+import config from "./config";
 
- export const fetchMediaByType = async (mediaType, sortBy) => {
-  const response = await fetch(`${BASE_URL}/${mediaType}/${sortBy}?api_key=${API_KEY}`);
+const apiKey = config.API_KEY;
+const baseUrl = config.BASE_URL;
+const lang = config.LANG;
+
+// FETCH MEDIA TYPE
+ export const fetchMediaByType = async (mediaType, sortBy, page) => {
+  const response = await fetch(`${baseUrl}/${mediaType}/${sortBy}?api_key=${apiKey}&language=${lang}&page=${page}`);
   const data = await response.json();
   return data.results;
 };
 
+export const searchMedia = async (mediaType, searchTerm, page) => {
+  const url = `${baseUrl}/search/${mediaType}?api_key=${apiKey}&query=${searchTerm}&include_adult=false&language=${lang}&page=${page}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data.results;
+};

@@ -1,7 +1,7 @@
 .CardContainer {
 	display: block;
 	margin: auto;
-	margin-top: 100px;
+	margin-top: 20px;
 	border-radius: 10px;
 	height: 560px;
 	width: 300px;
@@ -43,7 +43,7 @@ h6 {
 	margin-top: 15px;
 	font-size: 1em;
 	font-family: sans-serif;
-	max-width: 160px; /* Ajoutez cette ligne */
+	max-width: 160px;
 }
 
 .ratingContainer {
