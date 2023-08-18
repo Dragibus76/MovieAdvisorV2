@@ -1,0 +1,290 @@
+.media-details-container {
+    position: relative;
+   
+    overflow: hidden;
+  }
+  
+  .backdrop {
+    width: 100%;
+    min-height: 650px; 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .backdrop::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(200, 200, 200, 0.5);
+  }
+  
+  .poster {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 325px; 
+    z-index: 1;
+  }
+  
+  .poster img {
+    width: 100%;
+  }
+  
+  .info {
+    position: absolute;
+    top: 20px;
+    left: 370px; 
+    z-index: 1;
+    word-wrap: break-word;
+  }
+  
+  .info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .release-year {
+    font-weight: 500;
+    font-size: 80%;
+    margin-left: 5px;
+    word-wrap: break-word;
+  }
+  
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .genres {
+    margin-top: 10px;
+  }
+  
+  .genre {
+    display: inline-block;
+    color: black;
+    font-weight: 500;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    border: 2px solid #720e9e;
+    font-size: 14px;
+  }
+  
+  .duration {
+    font-weight: 500;
+    font-size: 100%;
+    margin-left: 10px;
+  }
+  
+  .dot-icon {
+    vertical-align: middle;
+    margin: 0; 
+    font-size: 1.3rem;
+  }
+  
+  .user-rating {
+    display: flex; 
+    align-items: center; 
+    margin-top: 10px;
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center; 
+    margin: 10px;
+  }
+  
+  .icon-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .icon-heart,
+  .icon-play {
+    color: #062441;
+    cursor: pointer;
+  }
+  
+  .icon-heart {
+    font-size: 14px;
+  }
+  
+  .icon-play {
+    font-size: 20px;
+  }
+  
+  .progress-circle {
+    display: flex;
+    align-items: center; 
+    margin-right: 10px;
+  }
+  
+  .tagline {
+    font-style: italic;
+    font-weight: 300;
+  }
+  
+  .spinner {
+    font-size: 3rem;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .synopsis {
+    max-height: 60vh; 
+    overflow-y: auto;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .trailer-iframe {
+    width: 90%;
+    max-width: 800px;
+    height: 500px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .synopsis-button {
+    background-color: #062441;
+    color: white;
+    border: none;
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .synopsis-button:hover {
+    background-color: #0e3b6e;
+  }
+  
+  .close-button-trailer{
+    font-size: 25px;
+  }
+  
+  .close-button-trailer:hover {
+  color: red;
+  }
+  
+  @media (max-width: 768px) {
+    .backdrop {
+      height: 500px; 
+    }
+  
+    .poster {
+      position: absolute; 
+      left: 20px;
+      width: 25vh; 
+      margin: 0 auto; 
+    }
+  
+    .info {
+      position: static; 
+      margin-top: 10px; 
+      width: 100%; 
+      padding: 10px;
+      word-wrap: break-word;
+    }
+  
+    .backdrop::before {
+      background-color: rgba(200,200,200,0.3); 
+    }
+  
+    .genres {
+      width: 100%;
+      padding: 10px;
+      word-wrap: break-word;
+    }
+  
+    .duration,
+    .release-date {
+      font-size: 11px;
+    }
+  }
+  
+
+@media (max-width: 768px) {
+  .media-details-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .backdrop {
+    height: 5vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .backdrop::before {
+    background-color: rgba(200, 200, 200, 0.3);
+  }
+
+  .poster {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 20vh;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  .poster img {
+    width: 100%;
+  }
+
+  .info {
+    position: static;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    word-wrap: break-word;
+  }
+
+
+}

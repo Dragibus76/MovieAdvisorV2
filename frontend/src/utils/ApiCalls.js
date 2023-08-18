@@ -21,9 +21,21 @@ export const searchMedia = async (mediaType, searchTerm, page) => {
 
 // FETCH MEDIA DETAILS 
 export const fetchMediaDetails = async (mediaType, mediaId) => {
-  const mediaTypeName = mediaType === 'movie' ? 'movie' : 'tv';
-  const url = `${baseUrl}/${mediaTypeName}/${mediaId}?api_key=${apiKey}&language=${lang}`;
+  const url = `${baseUrl}/${mediaType}/${mediaId}?api_key=${apiKey}&append_to_response=videos&language=${lang}`;
   const response = await fetch(url);
   const data = await response.json();
   return data;
+};
+
+// FETCH MEDIA CREDITS
+export const fetchMediaCredits = async (mediaType, mediaId) => {
+  try {
+    const response = await fetch(
+      `${baseUrl}/${mediaType}/${mediaId}/credits?api_key=${apiKey}`
+    );
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    throw new Error("Error fetching media credits");
+  }
 };

@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMediaDetails } from '../../utils/ApiCalls';
+import MediaHeader from '../../components/MediaHeader/MediaHeader';
+import './MediaDetailsPage.css';
+
 
 const MediaDetailsPage = () => {
   const { mediaType, mediaId } = useParams();
   const [details, setDetails] = useState(null);
+
 
   useEffect(() => {
     const fetchDetails = async () => {
@@ -19,9 +23,10 @@ const MediaDetailsPage = () => {
     return <p>Loading...</p>;
   }
 
+
   return (
     <div>
-      <h1>{details.title || details.name}</h1>
+       <MediaHeader/>
     </div>
   );
 };
