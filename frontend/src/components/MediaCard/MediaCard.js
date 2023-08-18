@@ -1,7 +1,6 @@
 import React from 'react';
-import renderStars from '../../../utils/starUtils';
-import getCountryFlag from '../../../utils/CountryFlags';
-import { dateFormaterByYear } from '../../../utils/dataFormater';
+
+import { getCountryFlag , renderStars , dateFormaterByYear} from '../../utils/Utils';
 import { Link } from 'react-router-dom';
 import { AiOutlineHeart } from 'react-icons/ai';
 import './MediaCard.css'

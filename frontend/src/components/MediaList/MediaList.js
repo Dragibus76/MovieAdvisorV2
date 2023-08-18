@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { fetchMediaByType, searchMedia } from "../../utils/ApiCalls";
-import MediaCard from "../class/MediaCard/MediaCard";
+import MediaCard from "../MediaCard/MediaCard";
 import { FaSearch } from "react-icons/fa";
 import "./MediaList.css";
 

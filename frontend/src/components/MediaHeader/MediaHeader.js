@@ -2,10 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { BsDot, BsHeartFill, BsPlayFill } from "react-icons/bs";
-import {
-  dateFormater,
-  CustomCircularProgressbar,
-} from "../../utils/dataFormater";
+import { CustomCircularProgressbar, dateFormater } from "../../utils/Utils";
 import { fetchMediaDetails, fetchMediaCredits } from "../../utils/ApiCalls";
 import "./MediaHeader.css";
 
@@ -62,7 +59,7 @@ const MediaHeader = () => {
       </div>
       <div className="info">
         <h2>
-          {details?.title || details.name}{" "}
+          {details?.title}{" "}
           <span className="release-year">
             ({isMoviePage ? year : details?.first_air_date?.split("-")[0]})
           </span>
@@ -77,7 +74,7 @@ const MediaHeader = () => {
             <BsDot className="dot-icon" />
             {isMoviePage
               ? `${details?.runtime} min`
-              : `${details?.episode_run_time} min`}
+              : `${details?.episode_run_time} min par épisode`}
             {details?.number_of_seasons > 0 && (
               <>
                 <BsDot className="dot-icon" />
