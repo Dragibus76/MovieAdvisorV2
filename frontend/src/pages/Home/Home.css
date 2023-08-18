@@ -1,0 +1,13 @@
+.HeroContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .TextContainer {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  
