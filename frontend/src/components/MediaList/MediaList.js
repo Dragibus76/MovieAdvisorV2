@@ -126,7 +126,7 @@ const MediaList = ({ mediaType }) => {
       </div>
       <div className="media-cards-container">
         {mediaList.map((media, index) => (
-          <MediaCard key={index} media={media} />
+          <MediaCard key={index} media={media} mediaType={mediaType} />
         ))}
       </div>
       <div className="pagination">

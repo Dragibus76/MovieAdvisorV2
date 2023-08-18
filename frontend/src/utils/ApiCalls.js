@@ -11,9 +11,19 @@ const lang = config.LANG;
   return data.results;
 };
 
+// FETCH MEDIA SEARCH
 export const searchMedia = async (mediaType, searchTerm, page) => {
   const url = `${baseUrl}/search/${mediaType}?api_key=${apiKey}&query=${searchTerm}&include_adult=false&language=${lang}&page=${page}`;
   const response = await fetch(url);
   const data = await response.json();
   return data.results;
+};
+
+// FETCH MEDIA DETAILS 
+export const fetchMediaDetails = async (mediaType, mediaId) => {
+  const mediaTypeName = mediaType === 'movie' ? 'movie' : 'tv';
+  const url = `${baseUrl}/${mediaTypeName}/${mediaId}?api_key=${apiKey}&language=${lang}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
 };
