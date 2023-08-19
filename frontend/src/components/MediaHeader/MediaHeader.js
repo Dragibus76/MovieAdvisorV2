@@ -59,7 +59,7 @@ const MediaHeader = () => {
       </div>
       <div className="info">
         <h2>
-          {details?.title}{" "}
+          {isMoviePage ? details?.title : details?.name}{" "}
           <span className="release-year">
             ({isMoviePage ? year : details?.first_air_date?.split("-")[0]})
           </span>

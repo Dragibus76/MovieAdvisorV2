@@ -1,0 +1,22 @@
+    .media-details-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .media-details-section {
+    width: 48%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: red;
+    overflow: hidden;
+  }
+  
+
+  @media (max-width: 768px) {
+    .media-details-content {
+      flex-direction: column;
+    }
+  }

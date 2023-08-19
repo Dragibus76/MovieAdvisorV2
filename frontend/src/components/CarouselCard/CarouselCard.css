@@ -1,0 +1,27 @@
+.credits-carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .carousel-card {
+    min-width: 150px;
+    scroll-snap-align: start;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .carousel-card-image {
+    width: 150px;
+    height: 180px;
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
+  }
+  
+  .carousel-card-info {
+    text-align: center;
+    width: 150px;
+  }
+  

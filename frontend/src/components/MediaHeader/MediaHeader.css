@@ -143,17 +143,6 @@
     font-weight: 300;
   }
   
-  .spinner {
-    font-size: 3rem;
-    animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
   .synopsis {
     max-height: 60vh; 
     overflow-y: auto;

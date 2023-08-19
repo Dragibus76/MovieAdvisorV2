@@ -1,0 +1,18 @@
+
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Pour occuper toute la hauteur de la fenêtre */
+  }
+  
+  .spinner {
+    font-size: 3rem;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }

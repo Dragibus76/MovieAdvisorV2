@@ -1,0 +1,15 @@
+.MediaCompanyContainer {
+    background-color: #E8E8E8;
+    height: auto;
+    width: 30%;
+}
+
+@media (max-width: 768px) {
+    .media-details-content {
+      flex-direction: column;
+    }
+
+    .MediaCompanyContainer {
+        width: 100%;
+    }
+  }

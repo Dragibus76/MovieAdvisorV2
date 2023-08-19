@@ -1,0 +1,16 @@
+
+.MediaCreditsContainer {
+    padding: 20px;
+    width: 70%;
+  }
+  
+  
+@media (max-width: 768px) {
+    .media-details-content {
+      flex-direction: column;
+    }
+
+    .MediaCreditsContainer {
+        width: 100%;
+    }
+  }
